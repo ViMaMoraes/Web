@@ -1,0 +1,45 @@
+Body {
+    background-color: #FFFFFF;
+    font-family: 'Indie Flower', 'Arial';
+}
+
+th,
+th {
+    background-color: #FF0FFF;
+    Color: #EE0000;
+    font-family: 'Open Sans';
+}
+
+td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+tr:hover {
+    background-color: #8b1a1a;
+    color: #FFFFFF;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.preco {
+    text-align: right;
+}
+
+.luxo {
+    color: #ff1493;
+}
+
+.total {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    padding: 16px;
+}
