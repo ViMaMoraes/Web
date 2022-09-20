@@ -1,0 +1,15 @@
+.Conteudo {
+    background: linear-gradient(to right, var(--cores-Dancantes));
+    width: 250px;
+    height: 90px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 999;
+    animation: coresdancantes 2s linear-infinite;
+}
+
+@keyframes coresDancantes {
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
