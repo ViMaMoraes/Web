@@ -5,7 +5,7 @@
     border-radius: 10px;
     position: relative;
     z-index: 999;
-    animation: coresdancantes 2s linear-infinite;
+    animation: coresDancantes 2s linear infinite;
 }
 
 @keyframes coresDancantes {
