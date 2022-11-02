@@ -1,4 +1,4 @@
-const baseURL = "http://172.0.0.1:5500"
+const baseURL = "http://127.0.0.1:5500"
 
 /**
  * loginFirebase
@@ -13,7 +13,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
-            window.location.href = `${baseURL}/home.html`
+            window.location.href = `${baseURL}/HTML/Fatec/Projeto/home.html`
         })
         .catch(error => {
             var mensagemErro = ''
@@ -46,7 +46,7 @@ function novoUsuario(email, senha) {
         .then((result) => {
             alert(`Bem vindo, ${JSON.stringify(result.user.email)}`)
             // Direcionameos o usuário para a tela inicial
-            window.location.href = `${baseURL}/index.html`
+            window.location.href = `${baseURL}/HTML/Fatec/Projeto/index.html`
         })
         .catch(error => {
             alert(`Nâo foi possível cadastrar o usuário. erro: ${error.message}`)
