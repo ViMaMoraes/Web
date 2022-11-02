@@ -18,7 +18,7 @@ function salvar(event, collection) {
 function incluir(event, collection) {
     event.preventDefault() // evita que o formulário seja recarregado
     //Obtendo os campos do formulário
-    const form = documento.forms[0]
+    const form = document.forms[0]
     const data = new FormData(form)
     //Obtendo os valores dos campos
     const values = Object.fromEntries(data.entries())
@@ -37,7 +37,7 @@ function incluir(event, collection) {
     return firebase.database().ref(collection).push(values)
         .then(() => {
             alert('✅ Registro cadastrado com sucesso!')
-            documento.getElementById('formCadastro').reset() //Limpar o formulário
+            document.getElementById('formCadastro').reset() //Limpar o formulário
         })
         .catch(error => {
             console.error(`Ocorreu um erro: ${error.code}-${error.message}`)
@@ -69,14 +69,14 @@ function obtemDados(collection) {
             //Dados do Firebase
             let db = item.ref.path.pieces_[0] // collection
             let id = item.ref.path.pieces_[1] // id
-            let registro = JSON.parse(JASON.stringify(item.val()))
+            let registro = JSON.parse(JSON.stringify(item.val()))
             //Criando as novas linhas na tabela
             let novaLInha = tabela.insertRow()
-            novaLInha.insertCell().textContent = item.val().Nome
-            novaLInha.insertCell().textContent = item.val().Nascimento
-            novaLInha.insertCell().textContent = item.val().Email
-            novaLInha.insertCell().textContent = item.val().Sexo
-            novaLInha.insertCell().textContent = item.val().Salário
+            novaLInha.insertCell().textContent = item.val().nome
+            novaLInha.insertCell().textContent = item.val().nascimento
+            novaLInha.insertCell().textContent = item.val().email
+            novaLInha.insertCell().textContent = item.val().sexo
+            novaLInha.insertCell().textContent = item.val().salario
             novaLInha.insertCell().innerHTML =
                 `
             <button class='btn btn-danger' title='Remove o registro corrente' onclick=remover('${db}','${id})>🗑️</button>
