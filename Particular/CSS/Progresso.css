@@ -19,7 +19,7 @@ div {
 .progress {
     width: 0%;
     background-color: #F6C796;
-    animation: progress 10s infinite;
+    animation: progress 250s infinite;
 }
 
 @keyframes progress {

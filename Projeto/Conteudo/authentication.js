@@ -65,3 +65,7 @@ function verificaLogado() {
         }
     })
 }
+function logout() {
+    alert('Saindo!')
+    window.location.href = `${baseURL}/HTML/Fatec/Projeto/index.html`
+}
